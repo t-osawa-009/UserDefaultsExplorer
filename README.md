@@ -8,7 +8,7 @@
 
 ## Requirements
 - Swift 5.x
-- iOS 11.0
+- iOS 13.x
 - Mac OS 10.15
 
 ## Usage
