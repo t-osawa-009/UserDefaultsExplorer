@@ -2,11 +2,13 @@
 - An app that allows you to share, view and edit UserDefaults stored in apps that have the plugin installed
 - [UserDefaultsExplorerPlugin](https://github.com/t-osawa-009/UserDefaultsExplorerPlugin) required
 
+<img src="https://github.com/t-osawa-009/UserDefaultsExplorer/blob/master/assets/data_flow.png?raw=true" width="600">
+
 <img src="https://github.com/t-osawa-009/UserDefaultsExplorer/blob/master/assets/mac.png?raw=true" width="400">
 
 ## Requirements
 - Swift 5.x
-- iOS 11.0
+- iOS 13.x
 - Mac OS 10.15
 
 ## Usage
