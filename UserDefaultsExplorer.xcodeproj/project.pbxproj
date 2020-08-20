@@ -131,9 +131,9 @@
 			children = (
 				171C36B224EA076B00B795EC /* PeerObject.swift */,
 				17B7C65324EC00A7006E7F5E /* SessionState.swift */,
+				17CB00B024EE765E007FCCE5 /* UserDefault.swift */,
 				17B7C66B24ECB9EC006E7F5E /* UserDefaultsInfoService.swift */,
 				17CB00AE24EE7647007FCCE5 /* UserDefaultsWrapper.swift */,
-				17CB00B024EE765E007FCCE5 /* UserDefault.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -291,25 +291,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17CB00A324EE4337007FCCE5 /* ActivityView.swift in Sources */,
 				171C369A24EA04A400B795EC /* AppDelegate.swift in Sources */,
 				17B7C65624EC00F2006E7F5E /* Log.swift in Sources */,
+				17CB00A524EE4471007FCCE5 /* MultilineTextView.swift in Sources */,
 				171C36B024EA06E400B795EC /* MultipeerConnectivityWrapper.swift in Sources */,
 				17CB009C24EE2E49007FCCE5 /* PasteboardWrapper.swift in Sources */,
-				17CB00AF24EE7647007FCCE5 /* UserDefaultsWrapper.swift in Sources */,
 				171C36B324EA076B00B795EC /* PeerObject.swift in Sources */,
 				171C369C24EA04A400B795EC /* SceneDelegate.swift in Sources */,
 				17B7C65424EC00A7006E7F5E /* SessionState.swift in Sources */,
 				17CB00AD24EE7612007FCCE5 /* String+ex.swift in Sources */,
+				17CB00B124EE765E007FCCE5 /* UserDefault.swift in Sources */,
 				17B7C66624EC1A03006E7F5E /* UserDefaultsDetailCell.swift in Sources */,
 				17B7C66A24ECB5E1006E7F5E /* UserDefaultsDetailCellViewModel.swift in Sources */,
-				17CB00A324EE4337007FCCE5 /* ActivityView.swift in Sources */,
-				17CB00B124EE765E007FCCE5 /* UserDefault.swift in Sources */,
 				17B7C67724ECC769006E7F5E /* UserDefaultsDetailView.swift in Sources */,
 				17CB00A024EE32A0007FCCE5 /* UserDefaultsEditView.swift in Sources */,
-				17CB00A524EE4471007FCCE5 /* MultilineTextView.swift in Sources */,
 				17B7C66C24ECB9EC006E7F5E /* UserDefaultsInfoService.swift in Sources */,
 				171C369E24EA04A400B795EC /* UserDefaultsListView.swift in Sources */,
 				17B7C66824EC2152006E7F5E /* UserDefaultsListViewViewModel.swift in Sources */,
+				17CB00AF24EE7647007FCCE5 /* UserDefaultsWrapper.swift in Sources */,
 				17B7C65C24EC161D006E7F5E /* ViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
