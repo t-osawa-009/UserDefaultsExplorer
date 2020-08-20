@@ -62,6 +62,10 @@ final class MultipeerConnectivityWrapper: NSObject {
         }
     }
     
+    func showBrowser(from viewcontroller: UIViewController) {
+        viewcontroller.present(self.browser, animated: true, completion: nil)
+    }
+    
     // MARK: - initializer
     private override init() {
         peerID = .init(displayName: UIDevice.current.name)
@@ -84,6 +88,9 @@ final class MultipeerConnectivityWrapper: NSObject {
                                                             discoveryInfo: nil,
                                                             serviceType: serviceType)
         self.serviceType = serviceType
+        self.browser = MCBrowserViewController(serviceType: serviceType,
+                                               session: session)
+        self.browser.delegate = self
         session.delegate = nil
         session.delegate = self
     }
@@ -97,6 +104,7 @@ final class MultipeerConnectivityWrapper: NSObject {
     private(set) var state: SessionState = .notConnected
     private(set) var serviceType: String!
     private var pendingData: [Data] = []
+    private var browser : MCBrowserViewController!
 }
 
 extension MultipeerConnectivityWrapper: MCSessionDelegate {
@@ -164,6 +172,10 @@ extension MultipeerConnectivityWrapper: MCNearbyServiceBrowserDelegate {
     func browser(_ browser: MCNearbyServiceBrowser, lostPeer peerID: MCPeerID) {
         logMessage(message: "lost peerID: \(peerID.displayName)")
     }
+    
+    func browserViewController(_ browserViewController: MCBrowserViewController, shouldPresentNearbyPeer peerID: MCPeerID, withDiscoveryInfo info: [String : String]?) -> Bool {
+        return true
+    }
 }
 
 extension MultipeerConnectivityWrapper: MCAdvertiserAssistantDelegate {
@@ -173,5 +185,15 @@ extension MultipeerConnectivityWrapper: MCAdvertiserAssistantDelegate {
 extension MultipeerConnectivityWrapper: MCNearbyServiceAdvertiserDelegate {
     func advertiser(_ advertiser: MCNearbyServiceAdvertiser, didReceiveInvitationFromPeer peerID: MCPeerID, withContext context: Data?, invitationHandler: @escaping (Bool, MCSession?) -> Void) {
         invitationHandler(true, self.session)
+    }
+}
+
+extension MultipeerConnectivityWrapper: MCBrowserViewControllerDelegate {
+    func browserViewControllerDidFinish(_ browserViewController: MCBrowserViewController) {
+        browserViewController.dismiss(animated: true, completion: nil)
+    }
+    
+    func browserViewControllerWasCancelled(_ browserViewController: MCBrowserViewController) {
+        browserViewController.dismiss(animated: true, completion: nil)
     }
 }

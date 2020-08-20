@@ -4,7 +4,7 @@ import SwiftUI
 final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
-    private let multipeerConnectivityWrapper = MultipeerConnectivityWrapper(serviceType: UserDefaultsWrapper.default.serviceType)
+    let multipeerConnectivityWrapper = MultipeerConnectivityWrapper(serviceType: UserDefaultsWrapper.default.serviceType)
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         multipeerConnectivityWrapper.start()

@@ -11,5 +11,9 @@ class ViewController: UIViewController {
         UserDefaults.standard.set(5, forKey: "5")
         UserDefaults.standard.set(6, forKey: "6")
     }
+    
+    @IBAction func reconnectTapped(_ sender: Any) {
+        (UIApplication.shared.delegate as! AppDelegate).userDefaultsExplorerPlugin.reconnect()
+    }
 }
 

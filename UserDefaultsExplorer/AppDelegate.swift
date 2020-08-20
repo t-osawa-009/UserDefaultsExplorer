@@ -19,7 +19,12 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         builder.remove(menu: .format)
         builder.remove(menu: .help)
         builder.remove(menu: .services)
-        builder.remove(menu: .view)
+        
+        let browserCommand = UIKeyCommand(input: "B", modifierFlags: [.command], action: #selector(handleBrowser(_:)))
+        browserCommand.title = "Browser Peer"
+        let browserMenu = UIMenu(title: "Browser Peer", image: nil, identifier: UIMenu.Identifier("BrowserPeer"), options: .displayInline, children: [browserCommand])
+        builder.insertChild(browserMenu, atEndOfMenu: .view)
+        
         let refreshCommand = UIKeyCommand(input: "E", modifierFlags: [.command], action: #selector(handleEditMenu(_:)))
         refreshCommand.title = "Edit ServiceType"
         let reloadDataMenu = UIMenu(title: "Edit ServiceType", image: nil, identifier: UIMenu.Identifier("editServiceType"), options: .displayInline, children: [refreshCommand])
@@ -48,6 +53,15 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         let sceneDelegate = UIApplication.shared.connectedScenes
             .first!.delegate as! SceneDelegate
         sceneDelegate.window!.rootViewController?.present(ac, animated: true, completion: nil)
+    }
+    
+    @objc private func handleBrowser(_ command: UIKeyCommand) {
+        let sceneDelegate = UIApplication.shared.connectedScenes
+            .first!.delegate as! SceneDelegate
+        guard let vc = sceneDelegate.window!.rootViewController else {
+            return
+        }
+        sceneDelegate.multipeerConnectivityWrapper.showBrowser(from: vc)
     }
     #endif
 }

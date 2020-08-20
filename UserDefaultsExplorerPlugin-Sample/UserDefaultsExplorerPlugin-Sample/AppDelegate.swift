@@ -3,7 +3,7 @@ import UserDefaultsExplorerPlugin
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    private let userDefaultsExplorerPlugin = UserDefaultsExplorerPlugin(userDefaults: UserDefaults.standard)
+    let userDefaultsExplorerPlugin = UserDefaultsExplorerPlugin(userDefaults: UserDefaults.standard)
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         return true
     }

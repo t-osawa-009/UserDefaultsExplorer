@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "UserDefaultsExplorerPlugin",
+        "repositoryURL": "https://github.com/t-osawa-009/UserDefaultsExplorerPlugin.git",
+        "state": {
+          "branch": null,
+          "revision": "e534bd5a62ec85aae3ff9db74db56df55a5bbaf0",
+          "version": "0.0.2"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

@@ -363,7 +363,7 @@
 			repositoryURL = "https://github.com/t-osawa-009/UserDefaultsExplorerPlugin.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.0.1;
+				minimumVersion = 0.0.2;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
