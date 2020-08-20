@@ -1,5 +1,5 @@
 # UserDefaultsExplorer
-UserDefaults Explorer & Edit value
+An app that allows you to share, view and edit UserDefaults stored in apps that have the plugin installed
 
 <img src="https://github.com/t-osawa-009/UserDefaultsExplorer/blob/master/assets/mac.png?raw=true" width="400">
 
