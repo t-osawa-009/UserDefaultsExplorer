@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,23 +13,8 @@
 		17CB006724ED3BA0007FCCE5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17CB006524ED3BA0007FCCE5 /* Main.storyboard */; };
 		17CB006924ED3BA4007FCCE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17CB006824ED3BA4007FCCE5 /* Assets.xcassets */; };
 		17CB006C24ED3BA4007FCCE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17CB006A24ED3BA4007FCCE5 /* LaunchScreen.storyboard */; };
-		17CB007C24ED3BE3007FCCE5 /* UserDefaultsExplorerPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17CB007B24ED3BE3007FCCE5 /* UserDefaultsExplorerPlugin.framework */; };
-		17CB007D24ED3BE3007FCCE5 /* UserDefaultsExplorerPlugin.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 17CB007B24ED3BE3007FCCE5 /* UserDefaultsExplorerPlugin.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		17CB00BE24EEAC69007FCCE5 /* UserDefaultsExplorerPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 17CB00BD24EEAC69007FCCE5 /* UserDefaultsExplorerPlugin */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		17CB007E24ED3BE3007FCCE5 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				17CB007D24ED3BE3007FCCE5 /* UserDefaultsExplorerPlugin.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		17CB005C24ED3BA0007FCCE5 /* UserDefaultsExplorerPlugin-Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UserDefaultsExplorerPlugin-Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,7 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17CB007C24ED3BE3007FCCE5 /* UserDefaultsExplorerPlugin.framework in Frameworks */,
+				17CB00BE24EEAC69007FCCE5 /* UserDefaultsExplorerPlugin in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,13 +89,15 @@
 				17CB005824ED3BA0007FCCE5 /* Sources */,
 				17CB005924ED3BA0007FCCE5 /* Frameworks */,
 				17CB005A24ED3BA0007FCCE5 /* Resources */,
-				17CB007E24ED3BE3007FCCE5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "UserDefaultsExplorerPlugin-Sample";
+			packageProductDependencies = (
+				17CB00BD24EEAC69007FCCE5 /* UserDefaultsExplorerPlugin */,
+			);
 			productName = "UserDefaultsExplorerPlugin-Sample";
 			productReference = 17CB005C24ED3BA0007FCCE5 /* UserDefaultsExplorerPlugin-Sample.app */;
 			productType = "com.apple.product-type.application";
@@ -139,6 +126,9 @@
 				Base,
 			);
 			mainGroup = 17CB005324ED3BA0007FCCE5;
+			packageReferences = (
+				17CB00BC24EEAC69007FCCE5 /* XCRemoteSwiftPackageReference "UserDefaultsExplorerPlugin" */,
+			);
 			productRefGroup = 17CB005D24ED3BA0007FCCE5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -314,6 +304,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "UserDefaultsExplorerPlugin-Sample/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -331,6 +322,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "UserDefaultsExplorerPlugin-Sample/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -364,6 +356,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		17CB00BC24EEAC69007FCCE5 /* XCRemoteSwiftPackageReference "UserDefaultsExplorerPlugin" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/t-osawa-009/UserDefaultsExplorerPlugin.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		17CB00BD24EEAC69007FCCE5 /* UserDefaultsExplorerPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 17CB00BC24EEAC69007FCCE5 /* XCRemoteSwiftPackageReference "UserDefaultsExplorerPlugin" */;
+			productName = UserDefaultsExplorerPlugin;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 17CB005424ED3BA0007FCCE5 /* Project object */;
 }

@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  UserDefaultsExplorerPlugin-Sample
-//
-//  Created by Takuya Ohsawa on 2020/08/19.
-//  Copyright © 2020 Takuya Ohsawa. All rights reserved.
-//
-
 import UIKit
 import UserDefaultsExplorerPlugin
 

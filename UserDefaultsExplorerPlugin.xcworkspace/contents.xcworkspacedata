@@ -2,9 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:UserDefaultsExplorerPlugin/../UserDefaultsExplorerPlugin-Sample/UserDefaultsExplorerPlugin-Sample.xcodeproj">
+      location = "group:UserDefaultsExplorer.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:UserDefaultsExplorerPlugin/UserDefaultsExplorerPlugin.xcodeproj">
+      location = "group:UserDefaultsExplorerPlugin/../UserDefaultsExplorerPlugin-Sample/UserDefaultsExplorerPlugin-Sample.xcodeproj">
    </FileRef>
 </Workspace>
