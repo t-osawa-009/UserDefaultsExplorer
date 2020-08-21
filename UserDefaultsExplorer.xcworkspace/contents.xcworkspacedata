@@ -5,6 +5,6 @@
       location = "group:UserDefaultsExplorer.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:UserDefaultsExplorerPlugin/../UserDefaultsExplorerPlugin-Sample/UserDefaultsExplorerPlugin-Sample.xcodeproj">
+      location = "group:/Users/dazezhuoye/Desktop/UserDefaultsExplorer/UserDefaultsExplorerPlugin-Sample/UserDefaultsExplorer-Sample.xcodeproj">
    </FileRef>
 </Workspace>
