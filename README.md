@@ -18,6 +18,10 @@
 1. Allow network with each device by alert.
 1. Once the network is connected, tap the sync button for UserDefaultsExplorer.
 
+## Note
+- UserDefaultsExplorer & UserDefaultsExplorerPlugin use [multipeerconnectivity](https://developer.apple.com/documentation/multipeerconnectivity)
+- Must be used on the same network
+
 ## CONTRIBUTING
 There's still a lot of work to do here. We would love to see you involved. You can find all the details on how to get started in the [Contributing Guide](https://github.com/t-osawa-009/UserDefaultsExplorer/blob/master/CONTRIBUTING.md).
 
